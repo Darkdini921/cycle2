@@ -23,19 +23,17 @@ public class Main {
 
         int a = 1;
         int b = 10;
-        do {
+        while (a <= 10){
             System.out.print(a + " ");
             a++;
         }
-        while (a <= 10);
 
         System.out.println("");
 
-        do {
+        for (; b >=1; b--){
             System.out.print(b + " ");
-            b--;
         }
-        while (b >= 1);
+
 
         // Задача 3
 
@@ -108,16 +106,14 @@ public class Main {
         System.out.println("");
         System.out.println("Задача 7");
 
-        int day = 1;
-        int i = 1;
-        do {
-            if (i == 5)
-                System.out.println("Сегодня пятница, "+ day + "-е число. Необходимо подготовить отчет");
-            if (i == 7){
-                i = 0;}
-            i++;
-            day++;
-        } while (day <= 31);
+        int friday = 3;
+        int day = friday;
+        int totalDays = 31;
+
+        while (day <= totalDays){
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+            day += 7;
+        }
 
         //Задача 8
 
@@ -125,12 +121,15 @@ public class Main {
         System.out.println("Задача 8");
 
         int year2 = 0;
+        int yearStart = 1825;
+        int yearFinish = 2125;
+        int yearStop = 3000;
 
         do {
             year2 = year2 + 79;
-            if (year2 > 1825 && year2 < 2125)
+            if (year2 > yearStart && year2 < yearFinish)
                 System.out.println(year2);
-        } while (year2 < 3000);
+        } while (year2 < yearStop);
 
 
 
